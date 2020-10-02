@@ -1,0 +1,17 @@
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Druci Poynter', '0421932880', 18246.18, '2014-10-07T17:16:10Z', 5);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Scarface Volleth', '3651923266', 11556.59, '2011-10-09T05:09:55Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Hildegarde Anyene', '8554165659', 22805.12, '2011-11-02T18:29:44Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Chrystel Babb', '2573590550', 19584.93, '2017-05-23T08:52:34Z', 0);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Tripp Alleyn', '3020914744', 4948.46, '2014-05-14T19:31:29Z', 5);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Eamon Conrard', '9829478785', 17571.86, '2015-12-22T12:53:16Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Ali Hearty', '0031666698', 20574.61, '2017-03-31T17:55:09Z', 4);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Janeva Filippov', '1239669208', 17603.99, '2010-07-29T22:32:37Z', 1);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Sileas Kippins', '8761202495', 20259.59, '2018-03-30T21:40:16Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Barby Hedde', '3275768387', 547.5, '2012-12-06T13:34:12Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Ronalda Doree', '6019847225', 23214.41, '2013-08-16T20:05:31Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Hilliary Mayworth', '1859847137', 11302.41, '2015-06-14T06:48:31Z', 5);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Caye Donativo', '0545129494', 22980.03, '2013-09-15T18:08:55Z', 5);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Nanci Ousbie', '6086825815', 14926.03, '2013-07-15T10:00:59Z', 0);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Link Trehearne', '5222064174', 8302.64, '2012-03-16T18:52:53Z', 3);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Ralph Hamstead', '6207758110', 14530.65, '2020-06-03T18:43:10Z', 4);
+insert into tb_client (name, cpf, income, birth_Date, children) values ('Sapphira Mc Pake', '1109804628', 6804.92, '2015-12-19T17:52:45Z', 1);
