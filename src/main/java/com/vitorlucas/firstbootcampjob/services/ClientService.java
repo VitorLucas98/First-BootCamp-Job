@@ -2,6 +2,8 @@ package com.vitorlucas.firstbootcampjob.services;
 
 import java.util.Optional;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -15,19 +17,19 @@ import com.vitorlucas.firstbootcampjob.services.exceptions.ResourceNotFoundExcep
 
 @Service
 public class ClientService {
-	
+
 	@Autowired
 	private ClientRepository repository;
 
 	@Transactional(readOnly = true)
-	public Page<ClientDTO> findAllPaged(PageRequest pageRequet){
+	public Page<ClientDTO> findAllPaged(PageRequest pageRequet) {
 		Page<Client> list = repository.findAll(pageRequet);
 		return list.map(x -> new ClientDTO(x));
 	}
-	
+
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
-		Optional <Client> cli = repository.findById(id);
+		Optional<Client> cli = repository.findById(id);
 		Client entity = cli.orElseThrow(() -> new ResourceNotFoundException("Client not found"));
 		return new ClientDTO(entity);
 	}
@@ -39,12 +41,24 @@ public class ClientService {
 		cli = repository.save(cli);
 		return new ClientDTO(cli);
 	}
-	
+
 	public void copyEntity(ClientDTO cliDTO, Client cli) {
 		cli.setName(cliDTO.getName());
 		cli.setCpf(cliDTO.getCpf());
 		cli.setBirthDate(cliDTO.getBirthDate());
 		cli.setChildren(cliDTO.getChildren());
 		cli.setIncome(cliDTO.getIncome());
+	}
+
+	@Transactional
+	public ClientDTO update(Long id, ClientDTO cliDTO) {
+		try {
+			Client cli = repository.getOne(id);
+			copyEntity(cliDTO, cli);
+			cli = repository.save(cli);
+			return new ClientDTO(cli);
+		} catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundException("Id not found :" + id);
+		}
 	}
 }
